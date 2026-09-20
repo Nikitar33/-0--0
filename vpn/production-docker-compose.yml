@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      - TZ=${TZ:-Europe/Moscow}
+      - SERVERURL=${SERVERURL}
+      - SERVERPORT=${SERVERPORT:-51820}
+      - PEERS=${PEERS:-phone1,laptop1}
+      - INTERNAL_SUBNET=${INTERNAL_SUBNET:-10.8.0.0}
+      - ALLOWEDIPS=${ALLOWEDIPS:-0.0.0.0/0}
+      - LOG_CONSENSE=${LOG_CONSENSE:-1}
+    ports:
+      - "${SERVERPORT:-51820}:${SERVERPORT:-51820}/udp"
+    volumes:
+      - ./config:/config
+      - /lib/modules:/lib/modules:ro
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv4.ip_forward=1
+    security_opt:
+      - no-new-privileges:true
+
+  vpn-admin:
+    build: ./admin-api
+    container_name: vpn-admin
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SERVER_HOST=${SERVERURL}
+      - SERVER_PORT=${SERVERPORT:-51820}
+      - SERVER_PUBLIC_KEY=${SERVER_PUBLIC_KEY:-REPLACE_SERVER_PUBLIC_KEY}
+    volumes:
+      - ./admin-data:/app/admin-data
+
+  vpn-admin-panel:
+    build: ./admin-panel
+    container_name: vpn-admin-panel
+    restart: unless-stopped
+    depends_on:
+      - vpn-admin
+    ports:
+      - "4173:4173"
+    environment:
+      - PORT=4173
+      - API_URL=http://vpn-admin:3000

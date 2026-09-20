@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VPN Admin</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-2: #1f2937;
+        --line: #334155;
+        --ink: #e2e8f0;
+        --muted: #94a3b8;
+        --primary: #60a5fa;
+        --success: #34d399;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Arial, sans-serif;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin: 0 0 20px;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        gap: 12px;
+      }
+
+      input, button {
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        font-size: 1rem;
+      }
+
+      input {
+        background: var(--panel-2);
+        color: var(--ink);
+      }
+
+      button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      code {
+        background: #0b1120;
+        padding: 8px;
+        border-radius: 8px;
+        display: block;
+        white-space: pre-wrap;
+      }
+
+      @media (max-width: 700px) {
+        form {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>VPN Admin</h1>
+        <form id="createClientForm">
+          <input id="clientName" type="text" placeholder="Имя клиента" required />
+          <input id="clientIp" type="text" placeholder="IP, например 10.8.0.2" required />
+          <button type="submit">Создать</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Клиенты</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Имя</th>
+              <th>IP</th>
+              <th>Конфиг</th>
+            </tr>
+          </thead>
+          <tbody id="clientsTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      async function loadClients() {
+        const res = await fetch('/api/clients');
+        const data = await res.json();
+        const tbody = document.getElementById('clientsTable');
+        tbody.innerHTML = '';
+
+        if (!data.ok || !data.clients.length) {
+          tbody.innerHTML = '<tr><td colspan="3">Нет клиентов</td></tr>';
+          return;
+        }
+
+        for (const client of data.clients) {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${client.name}</td>
+            <td>${client.ip}</td>
+            <td><a href="/api/clients/${client.name}/config" target="_blank">Скачать</a></td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      document.getElementById('createClientForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const name = document.getElementById('clientName').value.trim();
+        const ip = document.getElementById('clientIp').value.trim();
+
+        if (!name || !ip) return;
+
+        const res = await fetch('/api/clients', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, ip })
+        });
+
+        const data = await res.json();
+        if (!data.ok) {
+          alert(data.error || 'Ошибка создания');
+          return;
+        }
+
+        document.getElementById('createClientForm').reset();
+        loadClients();
+      });
+
+      loadClients();
+    </script>
+  </body>
+</html>

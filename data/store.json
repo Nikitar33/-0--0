@@ -1,0 +1,967 @@
+{
+  "users": [
+    {
+      "id": "user_admin_1",
+      "name": "Admin User",
+      "email": "admin@paypilot.io",
+      "passwordHash": "76b8db13b4baa86b564ef6f909869bf09827851f1ce8ca8324fce86acaef402b",
+      "role": "admin",
+      "token": "token_c5461c55a59c6b54db699a0c",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    },
+    {
+      "id": "user_demo_1",
+      "name": "Demo Client",
+      "email": "demo@paypilot.io",
+      "passwordHash": "c51a7a22a658ab40fa213fc0a02b01dd6832faaf5238ed967698354e70bfebcc",
+      "role": "user",
+      "token": "token_aece17a42658aac08407d562",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "wallet_admin_1",
+      "userId": "user_admin_1",
+      "currency": "USD",
+      "balance": 25000,
+      "status": "active",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    },
+    {
+      "id": "wallet_demo_1",
+      "userId": "user_demo_1",
+      "currency": "USD",
+      "balance": 11277,
+      "status": "active",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    },
+    {
+      "id": "wallet_1789935936900_hufffx",
+      "userId": "user_demo_1",
+      "currency": "EUR",
+      "balance": 0,
+      "status": "active",
+      "createdAt": "2026-09-20T20:25:36.900Z"
+    },
+    {
+      "id": "wallet_1789936707077_3k1udw",
+      "userId": "user_admin_1",
+      "currency": "GBP",
+      "balance": 0,
+      "status": "closed",
+      "createdAt": "2026-09-20T20:38:27.077Z"
+    },
+    {
+      "id": "wallet_1789936914034_f2omae",
+      "userId": "user_admin_1",
+      "currency": "EUR",
+      "balance": 0,
+      "status": "closed",
+      "createdAt": "2026-09-20T20:41:54.034Z"
+    },
+    {
+      "id": "wallet_1789937034751_j038a3",
+      "userId": "user_admin_1",
+      "currency": "EUR",
+      "balance": 0,
+      "status": "closed",
+      "createdAt": "2026-09-20T20:43:54.751Z"
+    },
+    {
+      "id": "wallet_1789937051360_a854pb",
+      "userId": "user_admin_1",
+      "currency": "USD",
+      "balance": 0,
+      "status": "closed",
+      "createdAt": "2026-09-20T20:44:11.360Z"
+    },
+    {
+      "id": "wallet_1789937120818_2x84k4",
+      "userId": "user_admin_1",
+      "currency": "EUR",
+      "balance": 0,
+      "status": "active",
+      "createdAt": "2026-09-20T20:45:20.818Z"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_admin_1",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "holder": "Admin User",
+      "maskedNumber": "**** 4242",
+      "provider": "Visa",
+      "status": "closed",
+      "createdAt": "2026-09-20T19:34:03.469Z",
+      "cardNumber": "4000123456784242",
+      "expiry": "12/29",
+      "cvv": "123"
+    },
+    {
+      "id": "card_demo_1",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "holder": "Demo Client",
+      "maskedNumber": "**** 8181",
+      "provider": "Mastercard",
+      "status": "active",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    },
+    {
+      "id": "card_1789935919122_tkmpfg",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "holder": "Demo Client",
+      "maskedNumber": "**** 6817",
+      "provider": "Visa",
+      "status": "active",
+      "createdAt": "2026-09-20T20:25:19.122Z"
+    },
+    {
+      "id": "card_1789935922745_76t515",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "holder": "Demo Client",
+      "maskedNumber": "**** 3456",
+      "provider": "Visa",
+      "status": "active",
+      "createdAt": "2026-09-20T20:25:22.745Z"
+    },
+    {
+      "id": "card_1789935925763_zm9i6g",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "holder": "Demo Client",
+      "maskedNumber": "**** 4751",
+      "provider": "Mastercard",
+      "status": "active",
+      "createdAt": "2026-09-20T20:25:25.763Z"
+    },
+    {
+      "id": "card_1789936198184_e8brox",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "holder": "Admin User",
+      "maskedNumber": "**** 1981",
+      "provider": "Visa",
+      "status": "closed",
+      "createdAt": "2026-09-20T20:29:58.184Z",
+      "cardNumber": "4000123456781981",
+      "expiry": "12/29",
+      "cvv": "123"
+    },
+    {
+      "id": "card_1789936383651_a4ijjh",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "holder": "Admin User",
+      "maskedNumber": "**** 2756",
+      "provider": "Mastercard",
+      "status": "closed",
+      "createdAt": "2026-09-20T20:33:03.651Z",
+      "cardNumber": "4000123456782756",
+      "expiry": "12/29",
+      "cvv": "123"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "internal_transfer_1789937170213_9uelnc",
+      "fromUserId": "user_admin_1",
+      "toUserId": "user_admin_1",
+      "fromWalletId": "wallet_1789937120818_2x84k4",
+      "toWalletId": "wallet_admin_1",
+      "amount": 9.17,
+      "creditedAmount": 10,
+      "currency": "EUR",
+      "targetCurrency": "USD",
+      "exchangeRate": 1.09,
+      "note": "Перевод между своими счетами",
+      "createdAt": "2026-09-20T20:46:10.213Z",
+      "internal": true
+    },
+    {
+      "id": "internal_transfer_1789937121495_7wp7e0",
+      "fromUserId": "user_admin_1",
+      "toUserId": "user_admin_1",
+      "fromWalletId": "wallet_admin_1",
+      "toWalletId": "wallet_1789937120818_2x84k4",
+      "amount": 10,
+      "creditedAmount": 9.17,
+      "currency": "USD",
+      "targetCurrency": "EUR",
+      "exchangeRate": 0.9174311926605504,
+      "note": "Перевод между своими счетами",
+      "createdAt": "2026-09-20T20:45:21.496Z",
+      "internal": true
+    },
+    {
+      "id": "internal_transfer_1789937077787_o2knmi",
+      "fromUserId": "user_admin_1",
+      "toUserId": "user_admin_1",
+      "fromWalletId": "wallet_1789937051360_a854pb",
+      "toWalletId": "wallet_admin_1",
+      "amount": 100,
+      "currency": "USD",
+      "note": "Перевод между своими счетами",
+      "createdAt": "2026-09-20T20:44:37.787Z",
+      "internal": true
+    },
+    {
+      "id": "internal_transfer_1789937059789_fvqnbi",
+      "fromUserId": "user_admin_1",
+      "toUserId": "user_admin_1",
+      "fromWalletId": "wallet_admin_1",
+      "toWalletId": "wallet_1789937051360_a854pb",
+      "amount": 100,
+      "currency": "USD",
+      "note": "Между своими счетами",
+      "createdAt": "2026-09-20T20:44:19.789Z",
+      "internal": true
+    },
+    {
+      "id": "transfer_1",
+      "fromUserId": "user_demo_1",
+      "toUserId": "user_admin_1",
+      "amount": 150,
+      "currency": "USD",
+      "note": "Demo top-up",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn_1789937170213_ivo0z2",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "type": "internal_credit",
+      "direction": "in",
+      "amount": 10,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937170213_9uelnc",
+      "metadata": {
+        "fromWalletId": "wallet_1789937120818_2x84k4",
+        "note": "Перевод между своими счетами",
+        "exchangeRate": 1.09
+      },
+      "createdAt": "2026-09-20T20:46:10.213Z"
+    },
+    {
+      "id": "txn_1789937170213_o7eg11",
+      "userId": "user_admin_1",
+      "walletId": "wallet_1789937120818_2x84k4",
+      "type": "internal_debit",
+      "direction": "out",
+      "amount": 9.17,
+      "currency": "EUR",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937170213_9uelnc",
+      "metadata": {
+        "toWalletId": "wallet_admin_1",
+        "note": "Перевод между своими счетами"
+      },
+      "createdAt": "2026-09-20T20:46:10.213Z"
+    },
+    {
+      "id": "txn_1789937121495_sgx3jq",
+      "userId": "user_admin_1",
+      "walletId": "wallet_1789937120818_2x84k4",
+      "type": "internal_credit",
+      "direction": "in",
+      "amount": 9.17,
+      "currency": "EUR",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937121495_7wp7e0",
+      "metadata": {
+        "fromWalletId": "wallet_admin_1",
+        "note": "Перевод между своими счетами",
+        "exchangeRate": 0.9174311926605504
+      },
+      "createdAt": "2026-09-20T20:45:21.495Z"
+    },
+    {
+      "id": "txn_1789937121495_1i9456",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "type": "internal_debit",
+      "direction": "out",
+      "amount": 10,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937121495_7wp7e0",
+      "metadata": {
+        "toWalletId": "wallet_1789937120818_2x84k4",
+        "note": "Перевод между своими счетами"
+      },
+      "createdAt": "2026-09-20T20:45:21.495Z"
+    },
+    {
+      "id": "txn_1789937077787_pdgine",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "type": "internal_credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937077787_o2knmi",
+      "metadata": {
+        "fromWalletId": "wallet_1789937051360_a854pb",
+        "note": "Перевод между своими счетами"
+      },
+      "createdAt": "2026-09-20T20:44:37.787Z"
+    },
+    {
+      "id": "txn_1789937077787_0skfhq",
+      "userId": "user_admin_1",
+      "walletId": "wallet_1789937051360_a854pb",
+      "type": "internal_debit",
+      "direction": "out",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937077787_o2knmi",
+      "metadata": {
+        "toWalletId": "wallet_admin_1",
+        "note": "Перевод между своими счетами"
+      },
+      "createdAt": "2026-09-20T20:44:37.787Z"
+    },
+    {
+      "id": "txn_1789937059789_1rwtjc",
+      "userId": "user_admin_1",
+      "walletId": "wallet_1789937051360_a854pb",
+      "type": "internal_credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937059789_fvqnbi",
+      "metadata": {
+        "fromWalletId": "wallet_admin_1",
+        "note": "Между своими счетами"
+      },
+      "createdAt": "2026-09-20T20:44:19.789Z"
+    },
+    {
+      "id": "txn_1789937059789_xoy127",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "type": "internal_debit",
+      "direction": "out",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "internal_transfer_1789937059789_fvqnbi",
+      "metadata": {
+        "toWalletId": "wallet_1789937051360_a854pb",
+        "note": "Между своими счетами"
+      },
+      "createdAt": "2026-09-20T20:44:19.789Z"
+    },
+    {
+      "id": "txn_1789935987106_hzl9zn",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "admin_debit",
+      "direction": "out",
+      "amount": 1000,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "admin_adjust_txn_1789935987106_a13865",
+      "metadata": {
+        "adminUserId": "user_admin_1"
+      },
+      "createdAt": "2026-09-20T20:26:27.106Z"
+    },
+    {
+      "id": "txn_1789935946483_vin65r",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "admin_debit",
+      "direction": "out",
+      "amount": 25,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "admin_adjust_txn_1789935946483_ncl67s",
+      "metadata": {
+        "adminUserId": "user_admin_1"
+      },
+      "createdAt": "2026-09-20T20:25:46.483Z"
+    },
+    {
+      "id": "txn_1789934994953_t9rd94",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789934994953_9ljgdl",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T20:09:54.953Z"
+    },
+    {
+      "id": "txn_1789933293413_34l2bo",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 10000,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789933293413_znbcy5",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:41:33.413Z"
+    },
+    {
+      "id": "txn_1789932975658_n026f7",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 2,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932975658_ezqvi1",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:36:15.658Z"
+    },
+    {
+      "id": "txn_1789932946996_20rz6p",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932946996_v856ji",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:46.996Z"
+    },
+    {
+      "id": "txn_1789932946843_pqjerk",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932946843_qbdp3c",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:46.843Z"
+    },
+    {
+      "id": "txn_1789932946674_rl84gg",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932946674_wnjt5k",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:46.674Z"
+    },
+    {
+      "id": "txn_1789932946507_zd07tk",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932946507_cqoj5j",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:46.507Z"
+    },
+    {
+      "id": "txn_1789932946139_qkcy50",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932946139_81bzbq",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:46.139Z"
+    },
+    {
+      "id": "txn_1789932945440_9bm1fo",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932945440_denn2k",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:45.440Z"
+    },
+    {
+      "id": "txn_1789932944630_s2s0us",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "topup_pay_1789932944630_iqhxq2",
+      "metadata": {
+        "source": "payment_provider_demo"
+      },
+      "createdAt": "2026-09-20T19:35:44.630Z"
+    },
+    {
+      "id": "txn_1",
+      "userId": "user_demo_1",
+      "walletId": "wallet_demo_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 1500,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "welcome-credit",
+      "metadata": {
+        "source": "welcome"
+      },
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    },
+    {
+      "id": "txn_2",
+      "userId": "user_admin_1",
+      "walletId": "wallet_admin_1",
+      "type": "credit",
+      "direction": "in",
+      "amount": 25000,
+      "currency": "USD",
+      "status": "completed",
+      "referenceId": "admin-topup",
+      "metadata": {
+        "source": "internal"
+      },
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n_1789937295307_8kh8ji",
+      "userId": "user_admin_1",
+      "type": "card",
+      "title": "Карта закрыта",
+      "message": "Visa **** 4242 закрыта.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:48:15.307Z"
+    },
+    {
+      "id": "n_1789937281297_vspww7",
+      "userId": "user_admin_1",
+      "type": "card",
+      "title": "Карта закрыта",
+      "message": "Visa **** 1981 закрыта.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:48:01.297Z"
+    },
+    {
+      "id": "n_1789937279079_zbe0lg",
+      "userId": "user_admin_1",
+      "type": "card",
+      "title": "Карта закрыта",
+      "message": "Mastercard **** 2756 закрыта.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:47:59.079Z"
+    },
+    {
+      "id": "n_1789937170213_j7lqgp",
+      "userId": "user_admin_1",
+      "type": "transfer",
+      "title": "Перевод между счетами",
+      "message": "9.17 EUR переведено на счёт: +10.00 USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:46:10.213Z"
+    },
+    {
+      "id": "n_1789937121496_j7c4ei",
+      "userId": "user_admin_1",
+      "type": "transfer",
+      "title": "Перевод между счетами",
+      "message": "10.00 USD переведено на счёт: +9.17 EUR.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:45:21.496Z"
+    },
+    {
+      "id": "n_1789937120818_09i5rg",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт открыт",
+      "message": "Новый счёт в EUR готов к использованию.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:45:20.818Z"
+    },
+    {
+      "id": "n_1789937083605_rnszun",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт закрыт",
+      "message": "Счёт EUR закрыт.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:44:43.605Z"
+    },
+    {
+      "id": "n_1789937081495_abeait",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт закрыт",
+      "message": "Счёт USD закрыт.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:44:41.495Z"
+    },
+    {
+      "id": "n_1789937077787_s4x23u",
+      "userId": "user_admin_1",
+      "type": "transfer",
+      "title": "Перевод между счетами",
+      "message": "100.00 USD переведено на счёт USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:44:37.787Z"
+    },
+    {
+      "id": "n_1789937059789_0cimo8",
+      "userId": "user_admin_1",
+      "type": "transfer",
+      "title": "Перевод между счетами",
+      "message": "100.00 USD переведено на счёт USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:44:19.789Z"
+    },
+    {
+      "id": "n_1789937051360_sqvj1k",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт открыт",
+      "message": "Новый счёт в USD готов к использованию.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:44:11.360Z"
+    },
+    {
+      "id": "n_1789937034751_60t9jb",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт открыт",
+      "message": "Новый счёт в EUR готов к использованию.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:43:54.751Z"
+    },
+    {
+      "id": "n_1789936918675_8kised",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт закрыт",
+      "message": "Счёт EUR закрыт.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:41:58.675Z"
+    },
+    {
+      "id": "n_1789936916599_fot6gg",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт изменён",
+      "message": "Валюта счёта изменена на EUR.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:41:56.599Z"
+    },
+    {
+      "id": "n_1789936914034_aux98x",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт открыт",
+      "message": "Новый счёт в USD готов к использованию.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:41:54.034Z"
+    },
+    {
+      "id": "n_1789936905140_7ymi1u",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт закрыт",
+      "message": "Счёт GBP закрыт.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:41:45.140Z"
+    },
+    {
+      "id": "n_1789936896693_h7cq8j",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт изменён",
+      "message": "Валюта счёта изменена на GBP.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:41:36.693Z"
+    },
+    {
+      "id": "n_1789936707077_hg6wv9",
+      "userId": "user_admin_1",
+      "type": "account",
+      "title": "Счёт открыт",
+      "message": "Новый счёт в EUR готов к использованию.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:38:27.077Z"
+    },
+    {
+      "id": "n_1789936383651_h1hzss",
+      "userId": "user_admin_1",
+      "type": "card",
+      "title": "Карта выпущена",
+      "message": "Mastercard **** 2756 привязана к счёту USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:33:03.651Z"
+    },
+    {
+      "id": "n_1789936198184_anhiwu",
+      "userId": "user_admin_1",
+      "type": "card",
+      "title": "Карта выпущена",
+      "message": "Visa **** 1981 привязана к счёту USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:29:58.184Z"
+    },
+    {
+      "id": "n_1789935987106_ihcaw8",
+      "userId": "user_demo_1",
+      "type": "admin",
+      "title": "Баланс изменён",
+      "message": "Администратор изменил баланс на -1000.00 USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:26:27.106Z"
+    },
+    {
+      "id": "n_1789935946483_acgmne",
+      "userId": "user_demo_1",
+      "type": "admin",
+      "title": "Баланс изменён",
+      "message": "Администратор изменил баланс на -25.00 USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:25:46.483Z"
+    },
+    {
+      "id": "n_1789935936900_da28zh",
+      "userId": "user_demo_1",
+      "type": "account",
+      "title": "Счёт открыт",
+      "message": "Новый счёт в EUR готов к использованию.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:25:36.900Z"
+    },
+    {
+      "id": "n_1789935925763_t926hf",
+      "userId": "user_demo_1",
+      "type": "card",
+      "title": "Карта выпущена",
+      "message": "Mastercard **** 4751 привязана к счёту USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:25:25.763Z"
+    },
+    {
+      "id": "n_1789935922745_3sp0ll",
+      "userId": "user_demo_1",
+      "type": "card",
+      "title": "Карта выпущена",
+      "message": "Visa **** 3456 привязана к счёту USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:25:22.745Z"
+    },
+    {
+      "id": "n_1789935919122_2yjuk3",
+      "userId": "user_demo_1",
+      "type": "card",
+      "title": "Карта выпущена",
+      "message": "Visa **** 6817 привязана к счёту USD.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:25:19.122Z"
+    },
+    {
+      "id": "n_1789934994953_fvhsci",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T20:09:54.953Z"
+    },
+    {
+      "id": "n_1789933293413_1ehr6n",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $10000.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:41:33.413Z"
+    },
+    {
+      "id": "n_1789932975658_6eki7i",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $2.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:36:15.658Z"
+    },
+    {
+      "id": "n_1789932946996_tuq6rg",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:46.996Z"
+    },
+    {
+      "id": "n_1789932946843_ubb4rp",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:46.843Z"
+    },
+    {
+      "id": "n_1789932946674_3ljxtb",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:46.674Z"
+    },
+    {
+      "id": "n_1789932946507_1mlkzm",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:46.507Z"
+    },
+    {
+      "id": "n_1789932946139_j90dlq",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:46.139Z"
+    },
+    {
+      "id": "n_1789932945440_incuv0",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:45.440Z"
+    },
+    {
+      "id": "n_1789932944630_bk17xw",
+      "userId": "user_demo_1",
+      "type": "payment",
+      "title": "Top-up completed",
+      "message": "You added $100.00 to your wallet.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:35:44.630Z"
+    },
+    {
+      "id": "n_1",
+      "userId": "user_demo_1",
+      "type": "welcome",
+      "title": "Welcome to PayPilot",
+      "message": "Your wallet is ready. You have $1500 available.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    },
+    {
+      "id": "n_2",
+      "userId": "user_admin_1",
+      "type": "system",
+      "title": "System online",
+      "message": "Admin panel is running and ready.",
+      "isRead": false,
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    }
+  ],
+  "paymentEvents": [
+    {
+      "id": "pay_1",
+      "provider": "demo",
+      "eventType": "payment.success",
+      "userId": "user_demo_1",
+      "amount": 100,
+      "currency": "USD",
+      "status": "completed",
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit_1789935987106_x1kxnu",
+      "adminUserId": "user_admin_1",
+      "action": "wallet.adjust",
+      "entityType": "wallet",
+      "entityId": "wallet_demo_1",
+      "metadata": {
+        "amount": -1000
+      },
+      "createdAt": "2026-09-20T20:26:27.106Z"
+    },
+    {
+      "id": "audit_1789935946483_scgux7",
+      "adminUserId": "user_admin_1",
+      "action": "wallet.adjust",
+      "entityType": "wallet",
+      "entityId": "wallet_demo_1",
+      "metadata": {
+        "amount": -25
+      },
+      "createdAt": "2026-09-20T20:25:46.483Z"
+    },
+    {
+      "id": "audit_1",
+      "adminUserId": "user_admin_1",
+      "action": "system.start",
+      "entityType": "system",
+      "entityId": "app",
+      "metadata": {
+        "message": "PayPilot initialized"
+      },
+      "createdAt": "2026-09-20T19:34:03.469Z"
+    }
+  ]
+}

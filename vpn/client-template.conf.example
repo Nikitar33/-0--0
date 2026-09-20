@@ -1,0 +1,10 @@
+[Interface]
+PrivateKey = REPLACE_PRIVATE_KEY
+Address = 10.8.0.2/24
+DNS = 1.1.1.1, 8.8.8.8
+
+[Peer]
+PublicKey = REPLACE_SERVER_PUBLIC_KEY
+Endpoint = your-public-domain-or-ip:51820
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
